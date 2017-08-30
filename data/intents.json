@@ -1,0 +1,57 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hey", "How are you?", "Is anyone there?", "Hello", "Good day", "Good Evening"],
+      "responses": ["Hello, thanks for reaching out.", "Good to see speak with you again.", "Hi there, how can I help you?"],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": ["See you later.", "Have a nice day.", "Bye! Hope to speak again soon."]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure!"]
+    },
+    {
+      "tag": "hours",
+      "patterns": ["When will you be available?", "Are you free?", "What hours work?", "When is a good time?"],
+      "responses": [],
+      "subintents": [
+        {
+          "tag": "todayhours",
+          "patterns": ["today", "now", "morning", "afternoon"],
+          "responses": ["I can meet with you today.", "I am available this afternoon.", "I can talk this afternoon."]
+        },
+        {
+          "tag": "tomorrowhours",
+          "patterns": ["tomorrow", "morning", "afternoon"],
+          "responses": ["I am available tomorrow.", "I am available tomorrow.", "I can talk tomorrow morning."]
+        },
+        {
+          "tag": "dayfree",
+          "patterns": ["day", "this week", "week"],
+          "responses": ["I am all booked this week unfortunately.", "I am available this week.", "I can meet with you later this week."]
+        }
+      ]
+    },
+    {
+      "tag": "car",
+      "patterns": ["car", "vehicle", "What cars do you have?", "What models do you have?"],
+      "responses": ["We have the Toyota Higlander and Honda Civic in stock."]
+    },
+    {
+      "tag": "cost",
+      "patterns": ["cost", "price", "pay", "paid", "How much do your cars cost?", "What's the price range?"],
+      "responses": ["The Toyota Higlander is around $30,000 and the Honda Civic is around $19,000."]
+    },
+    {
+      "tag": "opening",
+      "patterns": ["open", "hours", "dealership", "What time does the dealership open?", "When will you open?", "When will you close?"],
+      "responses": ["Our hours are 9 AM - 5 PM every weekday and closed on weekends."]
+    }
+  ]
+}
